@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        section { margin-bottom: 30px; padding: 15px; border-bottom: 1px solid #ccc; }
+        button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Praktikum 5: JavaScript Dasar</h1>
+
+    <!-- Latihan 1 & 2 -->
+    <section>
+        <h2>Latihan 1 & 2: Output & Alert</h2>
+        <p id="pesan">Konten awal.</p>
+    </section>
+
+    <!-- Latihan 6 -->
+    <section>
+        <h2>Latihan 6: Form Bilangan Genap/Ganjil</h2>
+        <label for="bilangan">Masukkan bilangan bulat:</label>
+        <input type="number" id="bilangan" step="1">
+        <button type="button" onclick="cekBilangan()">Periksa</button>
+        <p id="hasilBilangan"></p>
+    </section>
+
+    <!-- Latihan 7 -->
+    <section>
+        <h2>Latihan 7: Mengubah Warna Halaman</h2>
+        <button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
+        <button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
+        <button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
+    </section>
+
+    <!-- Latihan 8 -->
+    <section>
+        <h2>Latihan 8: Checkbox Menu Makanan</h2>
+        <h3>Daftar Menu Makanan</h3>
+        <label><input type="checkbox" class="menu" value="5000"> Ayam Goreng — Rp5.000</label><br>
+        <label><input type="checkbox" class="menu" value="500"> Tempe — Rp500</label><br>
+        <label><input type="checkbox" class="menu" value="2500"> Telur Dadar — Rp2.500</label><br>
+        <p>Total: Rp<span id="total">0</span></p>
+    </section>
+
+    <!-- Hubungkan ke JavaScript -->
+    <script src="script.js"></script>
+        <!-- F. Mini Project: Kalkulator Nilai Mahasiswa -->
+    <section>
+        <h2>Mini Project: Kalkulator Nilai Mahasiswa</h2>
+        <form id="formNilai">
+            <label for="tugas">Nilai Tugas (0-100):</label><br>
+            <input type="number" id="tugas" min="0" max="100" required><br><br>
+
+            <label for="uts">Nilai UTS (0-100):</label><br>
+            <input type="number" id="uts" min="0" max="100" required><br><br>
+
+            <label for="uas">Nilai UAS (0-100):</label><br>
+            <input type="number" id="uas" min="0" max="100" required><br><br>
+
+            <button type="button" onclick="hitungKalkulatorNilai()">Hitung Nilai</button>
+        </form>
+
+        <div id="hasilKalkulator" style="margin-top: 15px; font-weight: bold; display: none;">
+            <p>Nilai Akhir: <span id="txtNilaiAkhir">0</span></p>
+            <p>Predikat: <span id="txtPredikat">-</span></p>
+            <p>Status: <span id="txtStatus">-</span></p>
+        </div>
+    </section>
+
+</body>
+</html>
